@@ -1,0 +1,36 @@
+<input type="hidden" id="cfid" />
+<table class="table">
+    <tr>
+        <td>
+            <span lang="en" name="span" id="Fixed_revenues_initial_year">Fixed Revenues Initial (Million)</span> 
+
+        </td>
+        <td>
+            <input id="Fixed_Reveneus_initial" type="text" class="form-control" size="50" autocomplete="off" onkeyup="onlyDecimal(this)" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span lang="en">Fixed Revenues Growth Rate (%)</span>
+        </td>
+        <td>
+            <input id="Grate_FRevenues" type="text" class="form-control" size="3" maxlength="3" autocomplete="off" onkeyup="maxValue(this,100)" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span lang="en" name="span" id="Other_income_initial_year">Other Income Initial (Million)</span>
+        </td>
+        <td>
+            <input id="Other_Income_initial" type="text" class="form-control" size="50" autocomplete="off" onkeyup="onlyDecimal(this)" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span lang="en">Other Income Growth Rate (%)</span>
+        </td>
+        <td>
+            <input id="Grate_OIncome" type="text" class="form-control" size="3" maxlength="3" autocomplete="off" onkeyup="maxValue(this,100)" />
+        </td>
+    </tr>
+</table>

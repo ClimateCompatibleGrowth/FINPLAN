@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<studytypes>
+	<studytype>
+		<id>SP</id>
+		<value>Single Plant</value>
+	</studytype>
+	<studytype>
+		<id>U</id>
+		<value>Utility</value>
+	</studytype>
+	<studytype>
+		<id>PS</id>
+		<value>Power System</value>
+	</studytype>
+</studytypes>

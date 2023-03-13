@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<producttypes>
+	<producttype>
+		<id>E</id>
+		<value>Electricity</value>
+		<unit>GWh</unit>
+		<sunit>Per kWh</sunit>
+	</producttype>
+	<producttype>
+		<id>H</id>
+		<value>Heat</value>
+		<unit>Million GJ</unit>
+		<sunit>Per GJ</sunit>
+	</producttype>
+	<producttype>
+		<id>W</id>
+		<value>Water</value>
+		<unit>Million Cubic Meters</unit>
+		<sunit>Per Cubic Meter</sunit>
+	</producttype>
+		<producttype>
+		<id>C</id>
+		<value>CO2</value>
+		<unit>Million Tons</unit>
+		<sunit>Per Ton</sunit>
+	</producttype>
+</producttypes>

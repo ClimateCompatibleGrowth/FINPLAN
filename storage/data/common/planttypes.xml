@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<planttypes>
+	<planttype>
+		<id>Nuc</id>
+		<value>Nuclear</value>
+	</planttype>
+	<planttype>
+		<id>LIn</id>
+		<value>Lignite (indigenous)</value>
+	</planttype>
+	<planttype>
+		<id>CIn</id>
+		<value>Coal (indigenous)</value>
+	</planttype>
+	<planttype>
+		<id>CIm</id>
+		<value>Coal (imported)</value>
+	</planttype>
+	<planttype>
+		<id>HOIn</id>
+		<value>Heavy Oil (indigenous)</value>
+	</planttype>
+	<planttype>
+		<id>HOIm</id>
+		<value>Heavy Oil (imported)</value>
+	</planttype>
+	<planttype>
+		<id>LOIn</id>
+		<value>Light Oil (indigenous)</value>
+	</planttype>
+	<planttype>
+		<id>LOIm</id>
+		<value>Light Oil (imported)</value>
+	</planttype>
+	<planttype>
+		<id>GIn</id>
+		<value>Gas (indigenous)</value>
+	</planttype>
+	<planttype>
+		<id>GIm</id>
+		<value>Gas (imported)</value>
+	</planttype>
+	<planttype>
+		<id>HyO</id>
+		<value>Hydro</value>
+	</planttype>
+	<planttype>
+		<id>PS</id>
+		<value>Pumped-Storage</value>
+	</planttype>
+	<planttype>
+		<id>OrN</id>
+		<value>Other Renewables</value>
+	</planttype>
+	<planttype>
+		<id>WtE</id>
+		<value>Waste-to-Energy</value>
+	</planttype>
+	<planttype>
+		<id>OtH</id>
+		<value>Other</value>
+	</planttype>
+</planttypes>

@@ -1,0 +1,70 @@
+<br />
+<div id="perunits"></div>
+<div class="row">
+    <div class="col-md-4">
+        <input type='hidden' id='id' value='' />
+        <div lang="en">Product name and units</div>
+        <select name="Name" id="Name" class="form-control" onchange="changeProductType()">
+        </select>
+    </div>
+            <div class="col-md-4">
+            <div lang="en">Client</div>
+            <input type='text' class='form-control' id='ClientName' autocomplete="off" onkeypress="return /[0-9a-zA-Z]/i.test(event.key)"/>
+        </div>
+
+        <div class="col-md-4">
+        <div lang="en">Currency</div>
+        <select name="TradeCurrency" id="TradeCurrency" class='form-control' onchange="changeTradeCurrency()">
+        </select>
+
+        </div>
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class='col-md-4'>
+        <b>
+        <div lang="en">Quantity</div>
+    </b>
+    <br />
+        <span class='pure-radiobutton' style='padding-right:25px'>
+            <input type='radio' name='Amount' class='basic' id='YR' value='YR' onclick='setRateType(this.id, true)'
+                checked />
+            <label for='YR'> <span lang='en'>Yearly data</span></label>
+        </span>
+        <span class='pure-radiobutton' style='padding-right:25px'>
+            <input type='radio' name='Amount' class='basic' id='FD' value='FD' onclick='setRateType(this.id, false)' />
+            <label for='FD'> <span lang='en'>Fixed</span></label>
+        </span>
+        <input type='text' class='form-control' id='AmountFixed' autocomplete="off" onkeyup="onlyDecimal(this)"
+            disabled />
+        <br />
+        <div>
+            <div lang="en">Price for first year (<span id="perUnit"></span>)</div>
+            <input type='text' class='form-control' id='PriceBase' autocomplete="off" onkeyup="onlyDecimal(this)" />
+        </div>
+    </div>
+<div class="col-md-4"></div>
+    <div class='col-md-4'>
+        <b>
+            <div lang="en">Price</div>
+        </b>
+        <br />
+        <div class='pure-radiobutton' style='padding-right:25px'>
+            <input type='radio' name='Price' class='basic' id='CP' value='CP' onclick='setPriceType(this.id, true)' />
+            <label for='CP'> <span lang='en' id="CPlabel">Yearly current price</span></label>
+        </div>
+        <div class='pure-radiobutton' style='padding-right:25px'>
+            <input type='radio' name='Price' class='basic' id='YC' value='YC' onclick='setPriceType(this.id, true)' />
+            <label for='YC'> <span lang='en' id="YClabel">Yearly price change in addition to inflation (%)</span></label>
+        </div>
+        <div class='pure-radiobutton' style='padding-right:25px'>
+            <input type='radio' name='Price' class='basic' id='SC' value='SC' onclick='setPriceType(this.id, false)'
+                checked />
+            <label for='SC'> <span lang='en' id="SClabel">Standard change in addition to inflation (%)</span></label>
+            <input type='text' class='form-control' id='PriceFixed' autocomplete="off" onkeyup="onlyDecimal(this)" />
+        </div>
+    </div>
+</div>
+
+<br />

@@ -1,0 +1,84 @@
+
+<div id="plant_general_content">
+
+<span id="plant_general_header"></span>
+
+        
+<div class='cardbody'>
+    <input type='hidden' id='id' value='' />
+    <div class='row'>
+    <div class='col-md-6'>
+    <table class='table'><tbody>
+    <tr><td><span lang='en'>Name</span>
+    <input type="input" id='name' type='text' class='form-control' size='50' autocomplete='off' />
+    </td></tr>
+    <tr><td><span lang='en'>Plant type</span>
+        <select id="plantType" type="select" class="form-control">
+            <option value="Nuclear">Nuclear</option>
+            <option value="Lignite (indigenous)">Lignite (indigenous)</option>
+            <option value="Coal (indigenous)">Coal (indigenous)</option>
+            <option value="Coal (imported)">Coal (imported)</option>
+            <option value="Heavy Oil (indigenous)">Heavy Oil (indigenous)</option>
+            <option value="Heavy Oil (imported)">Heavy Oil (imported)</option>
+            <option value="Light Oil (indigenous)">Light Oil (indigenous)</option>
+            <option value="Light Oil (imported)">Light Oil (imported)</option>
+            <option value="Gas (indigenous)">Gas (indigenous)</option>
+            <option value="Gas (imported)">Gas (imported)</option>
+            <option value="Hydro">Hydro</option>
+            <option value="Pumped-Storage">Pumped-Storage</option>
+            <option value="Other Renewables">Other Renewables</option>
+            <option value="Waste-to-Energy">Waste-to-Energy</option>
+            <option value="Other">Other</option></select>
+    </td></tr>
+    <tr><td><span lang='en'>Status</span>
+    <select id='Status' class='form-control'>
+    <option value='Future'>Future</option>
+    <option value='Existing'>Existing</option>
+    <option value='Committed'>Committed</option>
+    </select>
+    </td></tr>
+    <tr><td><span lang='en'>Ownership</span>
+    <select id='Ownership' class='form-control'>
+    <option value='Utility'>Utility</option>
+    <option value='IPP'>IPP</option>
+    </select>
+    </td></tr>
+    <tr><td><span lang='en'>Unit size (MW)</span>
+    <input type="input" id='unitSize' type='text' class='form-control' size='50' autocomplete='off' onkeyup="onlyDecimal(this)"/>
+    </td></tr>
+    </table>
+    </div>
+    <div class='col-md-6'>
+    <table class='table'><tbody>
+    <tr><td><span lang='en'>First operation year</span>
+    <input type="input" id='FOyear' type='text' class='form-control' size='4' maxlength="4" autocomplete='off' onkeyup="onlyNumber(this)"/>
+    </td></tr>
+    <tr><td><span lang='en'>Construction period</span>
+    <input type="input" id='CPeriod' type='text' class='form-control' size='3' maxlength="3" autocomplete='off' onkeyup="maxValue(this, 100)" />
+    </td></tr>
+    <tr><td><span lang='en'>Plant life in years</span>
+    <input type="input" id='Plantlife' type='text' class='form-control' size='50' onkeyup="onlyNumber(this)" autocomplete='off'/>
+    </td></tr>
+    <tr>
+        <td id="tdproduct"><span lang="en">Product</span>                    
+            <div class="pure-checkbox" style="padding-right:25px">                    
+                <input type="checkbox" class="basic" id="E" value="E" name="product">                    
+                <label for="E"> Electricity  </label>
+            </div>
+                <div class="pure-checkbox" style="padding-right:25px">                    
+                    <input type="checkbox" class="basic" id="H" value="H" name="product">                    
+                    <label for="H"> Heat  </label>                    
+                </div>
+                <div class="pure-checkbox" style="padding-right:25px">                    
+                        <input type="checkbox" class="basic" id="W" value="W" name="product">                    
+                        <label for="W"> Water  </label>                    
+                    </div>
+                <div class="pure-checkbox" style="padding-right:25px">                    
+                <input type="checkbox" class="basic" id="C" value="C" name="product">                    
+            <label for="C"> CO2  </label>
+        </div>
+        </td>
+</tr>
+    <tbody></table></div></div>
+
+</div>

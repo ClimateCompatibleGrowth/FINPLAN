@@ -1,0 +1,243 @@
+<script>
+      var url = "app/results/results.js";
+      $.getScript(url);
+  </script>
+  <input type="hidden" id="allyears">
+  <div class="btn-group inline pull-right">
+      <a class="pointer" onclick="exportResults()">
+            <span style="display: block; float:left; margin-bottom:17px; padding-right:10px" lang="en">Export all result tables to excel</span>
+            <i class="material-icons btnblue carddivider" data-lang-content='false' lang="en">file_download</i></a>
+  </div>
+  <div class="panel-group" id="accordionresults" style="margin-top:30px">
+
+
+      <div class="panel panel-default">            
+                  <div class="panel-heading" style="padding-right: 0px !important;">           
+                   <table style="width: 100%;">            
+                        <tbody>
+                              <tr>            
+                              <td style="width:50px"><b>1.</b></td>            
+                                    <td><b>
+                                          <a data-toggle="collapse" class="pstitle collapsed" style="display:block; width:100%" data-parent="#accordion" id="psid" href="#collapse_results" aria-expanded="false">            
+                                          <span lang="en">Results</span> </a></b>            
+                                    </td>           
+                               </tr>            
+                              </tbody>
+                        </table>            
+                  </div>    
+
+                  <div id="collapse_results" class="panel-collapse collapse in" aria-expanded="true" style="height: 300px;">            
+                        <div class="panel-body" style="border: 0 !important;">            
+                              <table class="table table-hover" style="width: 100%;">
+                                    <tbody>
+                                          <tr>                   
+                                                 <td style="width: 50px;"></td>                   
+                                                  <td style="width: 50px;">1.1.</td>                  
+                                                    <td>                   
+                                                           <a style="display:block; cursor: pointer;" onclick="generateresults('1.1.')" lang="en" data-lang-token="Operating account in local currency">
+                                                            Operating account in local currency</a>                    
+                                                      </td>
+                                                      <td style="width:70px; text-align:center">                     
+                                                      <a class="undefined" onclick="generateresults('1.1.')">                    
+                                                            <i class="material-icons btnblue" data-toggle="tooltip" title="TABLE" lang="en" data-lang-content="false">view_module</i>
+                                                      </a>
+                                                </td>                    
+                                                <td style="width:70px; text-align:center">                    
+                                                      <a class="" data-toggle="tooltip" title="CHART" lang="en" data-lang-content="false" onclick="generateresults('1.1.')">                    
+                                                            <i class="material-icons btnorange">equalizer</i></a>
+                                                      </td>                    
+                                                </tr>
+
+                                                <tr>                   
+                                                      <td style="width: 50px;"></td>                   
+                                                       <td style="width: 50px;">1.2.</td>                  
+                                                         <td>                   
+                                                                <a style="display:block; cursor: pointer;" onclick="generateresults('1.2.')" lang="en" data-lang-token="Cash inflows and outflows in local currency">
+                                                                  Cash inflows and outflows in local currency</a>                    
+                                                           </td>
+                                                           <td style="width:70px; text-align:center">                     
+                                                           <a class="" onclick="generateresults('1.2.')">                    
+                                                                 <i class="material-icons btnblue" data-toggle="tooltip" title="TABLE" lang="en" data-lang-content="false">view_module</i>
+                                                           </a>
+                                                     </td>                    
+                                                     <td style="width:70px; text-align:center">                    
+                                                           <a class="" data-toggle="tooltip" title="CHART" lang="en" data-lang-content="false" onclick="generateresults('1.2.')">                    
+                                                                 <i class="material-icons btnorange">equalizer</i></a>
+                                                           </td>                    
+                                                     </tr>
+
+                                                     <tr>                   
+                                                      <td style="width: 50px;"></td>                   
+                                                       <td style="width: 50px;">1.3.</td>                  
+                                                         <td>                   
+                                                                <a style="display:block; cursor: pointer;" onclick="generateresults('1.3.')" lang="en" data-lang-token="Balance sheet in local currency">
+                                                                  Balance sheet in local currency</a>                    
+                                                           </td>
+                                                           <td style="width:70px; text-align:center">                     
+                                                           <a class="" onclick="generateresults('1.3.')">                    
+                                                                 <i class="material-icons btnblue" data-toggle="tooltip" title="TABLE" lang="en" data-lang-content="false">view_module</i>
+                                                           </a>
+                                                     </td>                    
+                                                     <td style="width:70px; text-align:center">                    
+                                                           <a class="" data-toggle="tooltip" title="CHART" lang="en" data-lang-content="false" onclick="generateresults('1.3.')">                    
+                                                                 <i class="material-icons btnorange">equalizer</i></a>
+                                                           </td>                    
+                                                     </tr>
+
+                                                     <tr>                   
+                                                      <td style="width: 50px;"></td>                   
+                                                       <td style="width: 50px;">1.4.</td>                  
+                                                         <td>                   
+                                                                <a style="display:block; cursor: pointer;" onclick="generateresults('1.4.')" lang="en" data-lang-token="Shareholders' return in local currency">
+                                                                  Shareholders' return in local currency</a>                    
+                                                           </td>
+                                                           <td style="width:70px; text-align:center">                     
+                                                           <a class="" onclick="generateresults('1.4.')">                    
+                                                                 <i class="material-icons btnblue" data-toggle="tooltip" title="TABLE" lang="en" data-lang-content="false">view_module</i>
+                                                           </a>
+                                                     </td>                    
+                                                     <td style="width:70px; text-align:center">                    
+                                                           <a class="" data-toggle="tooltip" title="CHART" lang="en" data-lang-content="false" onclick="generateresults('1.4.')">                    
+                                                                 <i class="material-icons btnorange">equalizer</i></a>
+                                                           </td>                    
+                                                     </tr>
+
+                                                     <tr>                   
+                                                      <td style="width: 50px;"></td>                   
+                                                       <td style="width: 50px;">1.5.</td>                  
+                                                         <td>                   
+                                                                <a style="display:block; cursor: pointer;" onclick="generateresults('1.5.')" lang="en" data-lang-token="Financial ratios">
+                                                                  Financial ratios</a>                    
+                                                           </td>
+                                                           <td style="width:70px; text-align:center">                     
+                                                           <a class="" onclick="generateresults('1.5.')">                    
+                                                                 <i class="material-icons btnblue" data-toggle="tooltip" title="TABLE" lang="en" data-lang-content="false">view_module</i>
+                                                           </a>
+                                                     </td>                    
+                                                     <td style="width:70px; text-align:center">                    
+                                                           <a class="" data-toggle="tooltip" title="CHART" lang="en" data-lang-content="false" onclick="generateresults('1.5.')">                    
+                                                                 <i class="material-icons btnorange">equalizer</i></a>
+                                                           </td>                    
+                                                     </tr>
+
+                                                     <tr>                   
+                                                      <td style="width: 50px;"></td>                   
+                                                       <td style="width: 50px;">1.6.</td>                  
+                                                         <td>                   
+                                                                <a style="display:block; cursor: pointer;" onclick="generateresults('1.6.')" lang="en" data-lang-token="Project finance analysis in local currency">
+                                                                  Project finance analysis in local currency</a>                    
+                                                           </td>
+                                                           <td style="width:70px; text-align:center">                     
+                                                           <a class="" onclick="generateresults('1.6.')">                    
+                                                                 <i class="material-icons btnblue" data-toggle="tooltip" title="TABLE" lang="en" data-lang-content="false">view_module</i>
+                                                           </a>
+                                                     </td>                    
+                                                     <td style="width:70px; text-align:center">                    
+                                                           <a class="" data-toggle="tooltip" title="CHART" lang="en" data-lang-content="false" onclick="generateresults('1.6.')">                    
+                                                                 <i class="material-icons btnorange">equalizer</i></a>
+                                                           </td>                    
+                                                     </tr>
+
+                                    </tbody>
+                              </table>               
+                        </div>                
+                  </div>                
+            </div>
+
+
+        </div>
+            <!-- Modal for displaying tables -->
+            <div class="modal right fade" id="resultModal">
+                  <div class="modal-dialog" style="width:100%; padding-left:260px; padding-top:60px">
+                        <div class="modal-content">
+                              <div class="modal-header"><span style="text-transform: uppercase;" lang="en">Results</span>
+                                    <button type="button" class="close" data-dismiss="modal">
+                                          <i class="material-icons">close</i>
+                                    </button>
+                              </div>
+                              <div class="modal-body">
+                                    <div class="row">
+<div class="col-md-12">
+      <select class="form-control" id="reportType"> 
+            <option value="1.1.">Operating account  in local currency</option>
+            <option value="1.2.">Cash inflows and outflows in local currency</option>
+            <option value="1.3.">Balance Sheet in local currency</option>
+            <option value="1.4.">Shareholders' return in Local currency</option>
+            <option value="1.5.">Financial ratios</option>
+            <option value="1.6.">Project finance analysis in local currency</option>
+      </select>
+</div>
+                                    </div>
+                                   
+
+                              <ul class="nav nav-tabs" id="tabs">
+                                    <li role="presentation"><a data-toggle="tab" href="#chart" id="tabchart"><span lang="en">CHART</span></a></li>
+                                    <li role="presentation" class="active" id="tabtable"><a data-toggle="tab" href="#table"><span lang="en">TABLE</span></a></li>
+                              </ul>
+
+                              <div class="tab-content">
+                              <div id="table" class="tab-pane fade in active">
+                              <div class="card">
+				<div class="cardtitle backwhite">
+					<span id="gridTitle" lang="en"></span>
+					<div class="btn-group inline pull-right">
+                                    <a  id="decDown">
+                                          <i class="material-icons btngreen carddivider" data-toggle="tooltip" title="Decrease number of decimal places"  data-lang-content='false' lang="en">keyboard_arrow_left</i></a>
+                                    <a id="decUp">
+                                          <i class="material-icons btngreen carddivider"  data-toggle="tooltip" title="Increase number of decimal places"  data-lang-content='false' lang="en">keyboard_arrow_right</i></a>
+                                    <a  onclick="exportExcel('gridResults','Export')">
+                                          <i class="material-icons btnblue carddivider"  data-toggle="tooltip" title="Export to excel"  data-lang-content='false' lang="en">file_download</i></a>
+                        </div>
+			      </div>
+				<div class="cardbody">
+                        <div id="table14"></div>
+
+                               <div id="grid">
+                                    <div id="gridResults"></div>
+                  </div>
+			      </div>
+			</div>
+                                    </div>
+                                          <div id="chart" class="tab-pane fade in">
+
+                                          <div class="card">
+				<div class="cardtitle backwhite">
+					<span id="chartTitle"></span>
+                              <div class="btn-group inline pull-right">
+                                    <a id="line" class="changeChart">
+                                          <i class="material-icons btngreen carddivider"  data-toggle="tooltip" title="Line chart" data-lang-content='false' lang="en">show_chart</i></a>
+                                    
+                                    <a id="column" class="changeChart">
+                                          <i class="material-icons btnblue carddivider"  data-toggle="tooltip" title="Column chart" data-lang-content='false' lang="en">equalizer</i></a>
+                                    <a id="stackedarea" class="changeChart">
+                                          <i class="material-icons btnorange carddivider"  data-toggle="tooltip" title="Area chart" data-lang-content='false' lang="en">insert_photo</i></a>
+                                    <a id="stackedcolumn" class="changeChart">
+                                                <i class="material-icons btnorange carddivider"  data-toggle="tooltip" title="Stacked column chart" data-lang-content='false' lang="en">clear_all</i></a>
+                                    <a id="exportChart" onclick="exportChart()">
+                                          <i class="material-icons btnblue carddivider" data-toggle="tooltip" title="Download image" data-lang-content='false' lang="en">file_download</i></a>
+                        </div>
+			      </div>
+				<div class="cardbody">
+                        <div id="chartResults" style="width: 100%; height: 500px">chart</div>
+			      </div>
+			</div>  
+            </div>
+      </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+
+            <script type="text/javascript">
+                  $(document).ready(function () {
+                  
+                      if (localStorage.getItem("newmaed-quote-scroll") != null) {
+                          $(window).scrollTop(localStorage.getItem("newmaed-quote-scroll"));
+                      }
+                  
+                      $(window).on("scroll", function() {
+                          localStorage.setItem("newmaed-quote-scroll", $(window).scrollTop());
+                      });
+                  
+                    });
+            </script>

@@ -1,0 +1,160 @@
+<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+
+    <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+        <button id="en" style="width:30%" class="btn btn-primary btn-lang" onclick="changeLang('en'); return false;">
+            En
+        </button>
+        <button id="es" style="width:30%" class="btn btn-primary btn-lang" onclick="changeLang('es'); return false;">
+            Es
+        </button>
+        <button id="fr" style="width:30%" class="btn btn-primary btn-lang" onclick="changeLang('fr'); return false;">
+            Fr
+        </button>
+    </div>
+    
+    <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+        <span class="btn btn-nest"></span>
+        <span class="btn btn-nest"></span>
+        <span class="btn btn-nest"></span>
+        <span class="btn btn-nest"></span>
+    
+    </div>
+    </div>
+
+<br/>
+<ul class="nav nav-list">
+    <li class="shadow">
+        <a id="study" href="#/ManageStudy">
+            <i class="material-icons menu-icon">home</i>
+            <span lang="en" class="menu-text">Manage case studies</span>
+      </a>
+        <b class="arrow"></b>
+    </li>
+
+    <div id="finplanmenu" style="margin-top:20px;" class="nav shadow nav-list">
+        <!-- General data -->
+        <li class="open">
+            <a class="dropdown-toggle pointer">
+                <i class="material-icons menu-icon">description</i>
+                <span class="menu-text" lang="en">Case data</span>
+                <b class="arrow material-icons">keyboard_arrow_down</b>
+            </a>
+            <ul class="submenu">
+                <li class="">
+            <a id="general" href="#/GetData/general_information">
+                <span class="menu-text" lang="en"> General data</span>
+            </a>
+            <b class="arrow"></b>
+                </li>
+            
+                <li class="">
+            <a id="taxation" href="#/GetData/taxation_depreciation">
+               <span class="menu-text" lang="en"> Taxation data</span>
+            </a>
+            <b class="arrow"></b>
+                </li>
+            
+                <li class="">
+            <a id="balancesheet" href="#/GetData/balancesheet_initial">
+               <span class="menu-text" lang="en"> Initial balance sheet</span>
+            </a>
+            <b class="arrow"></b>
+                </li>
+            
+                <li class="">
+            <a id="sales" href="#/SalePurchase/sales_sale">
+               <span class="menu-text" lang="en"> Sales and purchase data</span>
+            </a>
+            <b class="arrow"></b>
+                </li>
+            </ul>
+        </li>
+<!--Plants data-->
+<!-- <li class="">
+    <a class="dropdown-toggle pointer">
+        <i class="material-icons menu-icon">flash_on</i>
+        <b><span class="menu-text" id="energy" lang="en"> Plant data</span></b>
+        <b class="arrow material-icons">keyboard_arrow_down</b>
+    </a>
+       <ul class="submenu"> -->
+ <li class="">
+    <a id="plant" href="#/Plant/">
+        <i class="material-icons menu-icon">flash_on</i>
+        <span class="menu-text" id="energy" lang="en"> Plant data</span>
+    </a>
+    <b class="arrow"></b>
+</li>
+<!--<li class="">
+    <a id="plantinvestment_investment" href="#/GetData/plantinvestment_investment">
+        <span class="menu-text" id="energy" lang="en"> Investment cost data</span>
+    </a>
+    <b class="arrow"></b>
+</li> -->
+<!-- <li class="">
+    <a id="geninf" href="#/PlantSourcesFinancing">
+        <span class="menu-text" id="energy" lang="en"> Sources of financing</span>
+    </a>
+    <b class="arrow"></b>
+</li>
+<li class="">
+    <a id="planttermsfinancing_export1" href="#/GetData/planttermsfinancing_export1">
+        <span class="menu-text" id="energy" lang="en"> Terms of financing</span>
+    </a>
+    <b class="arrow"></b>
+</li>
+<li class="">
+    <a id="plantdepreciation_depreciation" href="#/GetData/plantdepreciation_depreciation">
+        <span class="menu-text" id="energy" lang="en"> Depreciation data and decommissioning</span>
+    </a>
+    <b class="arrow"></b>
+</li> -->
+       <!-- </ul>
+</li> -->
+
+<!--//Plants data-->
+
+<!--Financial manager-->
+<li class="">
+    <a id="financialmanager" href="#/GetData/financialmanager_equity">
+        <i class="material-icons menu-icon">local_atm</i>
+        <span class="menu-text" lang="en"> Financial manager</span>
+    </a>
+</li>
+<!--//Financial manager-->
+   <!--Calculate-->
+<li class="">
+    <a id="calculation" href="#/Calculation">
+        <i class="material-icons menu-icon">settings_applications</i>
+        <span class="menu-text" lang="en"> Calculate</span>
+    </a>
+</li>
+<!--//Calculate-->
+   <!--Results-->
+   <li class="">
+    <a id="intermediate" href="#/ResultsIntermediate">
+        <i class="material-icons menu-icon">equalizer</i>
+        <span class="menu-text" lang="en"> Intermediate results</span>
+    </a>
+</li>
+   <!--Results-->
+   <li class="">
+    <a id="results" href="#/Results">
+        <i class="material-icons menu-icon">equalizer</i>
+        <span class="menu-text" lang="en"> Results</span>
+    </a>
+</li>
+<!--//Results-->
+</div>
+
+<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+    <span id="sidebar-toggle-icon" class="ace-icon material-icons pointer" style="color:#2196f3;">settings_ethernet</span>
+</div>
+
+<script>
+    var id=Cookies("id");
+    if(id!=="study" && id!=="home" && id!=="about" && id!=="accounts"){
+        $("#finplanmenu").show();
+    }else{
+        $("#finplanmenu").hide();
+    }
+</script>

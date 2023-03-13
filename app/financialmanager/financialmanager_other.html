@@ -1,0 +1,120 @@
+    <div class="row">
+        <div class="col-md-6">
+    <div class="card">
+        <div class="cardtitle backwhite">
+            <span lang="en">Other financial data</span>
+            <a onclick="saveDataOtherFinancial()" id="savedataOtherFinancial" class='pull-right'>
+                <i class="material-icons btngreen carddivider" data-toggle="tooltip" title="Save data" data-lang-content='false' lang="en">save</i></a>
+        </div>
+        <div class="cardbody">
+            <input type="hidden" id="cfid" />
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <span lang="en">Spread for short term deposits (%) above local inflation</span>
+                                <input id="STDeposit" type="text" class="form-control" size="50" autocomplete="off" onkeyup="onlyDecimal(this)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Spread for stand-by facility (%) above local inflation</span>
+                                <input id="SBFacility" type="text" class="form-control" size="50" autocomplete="off"  onkeyup="onlyDecimal(this)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Short loans outstanding initial </span><span lang="en" id="currencylabel"></span>
+                                <input id="SLInitial" type="text" class="form-control" size="50" autocomplete="off"  onkeyup="onlyDecimal(this)"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="cardtitle backwhite">
+                            <span lang="en">Shareholders' return data</span>
+                            <a onclick="saveDataShareholders()" id="savedataShareholders" class='pull-right'>
+                                <i class="material-icons btngreen carddivider" data-toggle="tooltip" title="Save data" data-lang-content='false' lang="en">save</i></a>
+                        </div>
+                        <div class="cardbody">
+                            <input type="hidden" id="sfid" />
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <span lang="en">Approximate average return</span>
+                                <input id="A_ROR" type="text" class="form-control" size="3" maxlength="3" autocomplete="off" onkeyup="maxValue(this,100)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Disposal year</span>
+                                <input id="Disposal_Year" type="text" class="form-control" size="50" autocomplete="off" onkeyup="onlyDecimal(this)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Discount rate</span>
+                                <input id="D_Rate" type="text" class="form-control"  size="3" maxlength="3"  autocomplete="off" onkeyup="maxValue(this,100)"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+    <div class="card">
+        <div class="cardtitle backwhite">
+            <span lang="en">Terms of project finance loan</span>
+            <a onclick="saveDataTherms()" id="savedataTherms" class='pull-right'>
+                <i class="material-icons btngreen carddivider" data-toggle="tooltip" title="Save data" data-lang-content='false' lang="en">save</i></a>
+        </div>
+        <div class="cardbody">
+            <input type="hidden" id="bnid" />
+
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <span lang="en">Discount rate</span>
+                                <input id="DRate" type="text" class="form-control" size="3" maxlength="3" autocomplete="off" onkeyup="maxValue(this,100)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Average loan term (years)</span>
+                                <input id="Loan_Term" type="text" class="form-control" size="50" autocomplete="off" onkeyup="onlyDecimal(this)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Security ratio for loan period</span>
+                                <input id="Security_ratio1" type="text" class="form-control" size="50" autocomplete="off" onkeyup="onlyDecimal(this)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Expected life of project (years)</span>
+                                <input id="Life_Term" type="text" class="form-control" size="50" autocomplete="off" onkeyup="onlyDecimal(this)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Security ratio for project life</span>
+                                <input id="Security_ratio2" type="text" class="form-control" size="50" autocomplete="off" onkeyup="onlyDecimal(this)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">First year of cash to debt service</span>
+                                <input id="FY_Cash_DebtService" type="text" class="form-control" size="50" autocomplete="off" onkeyup="onlyNumber(this)"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>

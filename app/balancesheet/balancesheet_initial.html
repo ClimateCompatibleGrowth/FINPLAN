@@ -1,0 +1,182 @@
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="cardtitle backwhite">
+                    <span lang="en"  id="Assets">Assets (Million local currency)</span>
+
+                </div>
+                <div class="cardbody">
+                    <input type="hidden" id="cfid" />
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <span lang="en">Gross Fixed Assets</span>
+
+                            </td>
+                            <td>
+                                <input id="GrossFixedAssets" type="text" class="form-control" size="50"
+                                    autocomplete="off" onkeyup="calculateNetFxdAsst(this)" onchange="validate(this)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Less: Accumulated Depreciation</span>
+                            </td>
+                            <td>
+                                <input id="LessDepreciation" type="text" class="form-control" size="50"
+                                    autocomplete="off" onkeydown="calculateNetFxdAsst(this)" onkeyup="onlyDecimal(this)"  onchange="validate(this)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Less: Accumulated Consumer Contribution</span>
+                            </td>
+                            <td>
+                                <input id="ConsumerContribution" type="text" class="form-control" size="50"
+                                    autocomplete="off" onkeyup="calculateNetFxdAsst(this)" onchange="validate(this)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Net Fixed Assets </span>
+                            </td>
+                            <td>
+                                <input id="NetFxdAsst" type="text" class="form-control" size="50" autocomplete="off"
+                                    readonly />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Work in Progress</span>
+                            </td>
+                            <td>
+                                <input id="WorkProgress" type="text" class="form-control" size="50" autocomplete="off"
+                                    onkeyup="onlyDecimal(this)" onchange="validate(this)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Receivables (including VAT)</span>
+                            </td>
+                            <td>
+                                <input id="Receivables" type="text" class="form-control" size="50" autocomplete="off"
+                                    onkeyup="onlyDecimal(this)" onchange="validate(this)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Short Term Deposits </span>
+                            </td>
+                            <td>
+                                <input id="ShortTermDeposits" type="text" class="form-control" size="50"
+                                    autocomplete="off" onkeyup="onlyDecimal(this)" onchange="validate(this)"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="cardtitle backwhite">
+                    <span lang="en" id="Equity_and_Liabilities">Equity and Liabilities (Million local currency)</span>
+
+                </div>
+                <div class="cardbody">
+                    <input type="hidden" id="sfid" />
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <span lang="en">Equity</span>
+                            </td>
+                            <td>
+                                <input id="Equity" type="text" class="form-control" size="50" autocomplete="off"
+                                    onkeyup="onlyDecimal(this)" onchange="validate(this)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Retained Earning</span>
+                            </td>
+                            <td>
+                                <input id="RetainedEarning" type="text" class="form-control" size="50"
+                                    autocomplete="off" onkeyup="onlyDecimal(this)" onchange="validate(this)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Net Bonds Outstanding</span>
+                            </td>
+                            <td>
+                                <input id="NetBondsOut" type="text" class="form-control" size="50" autocomplete="off"
+                                    readonly />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Net Loans Outstanding </span>
+                            </td>
+                            <td>
+                                <input id="NetloanOut" type="text" class="form-control" size="50" autocomplete="off"
+                                    readonly />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Consumer Deposits</span>
+                            </td>
+                            <td>
+                                <input id="ConsumerDeposits" type="text" class="form-control" size="50"
+                                    autocomplete="off" onkeyup="onlyDecimal(this)" onchange="validate(this)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Current Maturity</span>
+                            </td>
+                            <td>
+                                <input id="Currentmaturity" type="text" class="form-control" size="50"
+                                    autocomplete="off" onkeyup="onlyDecimal(this)" onchange="validate(this)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><br /></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="cardtitle backwhite">
+                    <span lang="en">ReEvaluation of Assets</span>
+
+                </div>
+                <div class="cardbody">
+                    <input type="hidden" id="bnid" />
+
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <div class="pure-checkbox">
+                                    <input type="checkbox" class="basic" id="OptionReEvaluation" value='Y' />
+                                    <label for="OptionReEvaluation"> Option for ReEvaluation of Assets </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="en">Taxable ReEvaluation Gains</span>
+                                <input id="TaxableReEvaluation" type="text" class="form-control" size="50"
+                                    autocomplete="off" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>

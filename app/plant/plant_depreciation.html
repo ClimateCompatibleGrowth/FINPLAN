@@ -1,0 +1,45 @@
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table" id="tbldepreciation">
+                <tr>
+                    <td>
+                        <span class='pure-radiobutton'> 
+                            <input type='radio' id='typel' name='Type' value='L' onclick="setReadOnly('LinearYears')"/><label for='typel'>Linear</label> 
+                        </span> 
+                        <input id="LinearYears" name="LinearYears" type="text" class="form-control" onkeyup="onlyDecimal(this)" autocomplete="off" readonly/>
+                        <span lang="en" class="small text-mutted pull-right">Number of years</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class='pure-radiobutton'> 
+                            <input type='radio' id='typesy' name='Type' value='SY' onclick="setReadOnly('SumYears')"/><label for='typesy'>Sum of the years digits</label> 
+                        </span> 
+                        <input id="SumYears" name="SumYears" type="text" class="form-control"  onkeyup="onlyDecimal(this)" autocomplete="off" readonly/>
+                        <span lang="en" class="small text-mutted pull-right">Number of years</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class='pure-radiobutton'> 
+                            <input type='radio' id='typedb' name='Type' value='DB' onclick="setReadOnly('DepreciationRate')"/><label for='typedb'>Declining balance</label> 
+                        </span> 
+                        <input id="DepreciationRate" name="DepreciationRate" type="text" class="form-control" size="3" maxlength="3" onkeyup="maxValue(this,100)" autocomplete="off" readonly/>
+                        <span lang="en" class="small text-mutted pull-right">Depreciation rate (%)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class='pure-radiobutton'> 
+                            <input type='radio' id='typeds' name='Type' value='DS' onclick="setReadOnly('DecliningYears','DecliningRate')"/><label for='typeds'>Declining switching to linear</label> 
+                        </span> 
+                        <input id="DecliningYears" name="DecliningYears" type="text" class="form-control" onkeyup="onlyDecimal(this)" autocomplete="off" readonly/>
+                        <span lang="en" class="small text-mutted pull-right">Number of years</span>
+                        <input id="DecliningRate" name="DecliningRate" type="text" class="form-control" size="3" maxlength="3" onkeyup="maxValue(this,100)" autocomplete="off" readonly/>
+                        <span lang="en" class="small text-mutted pull-right">Depreciation rate (%)</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>

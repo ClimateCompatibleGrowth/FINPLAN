@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TaxTypes>
+	<TaxType>
+		<id>T1</id>
+		<value>Tax1</value>
+	</TaxType>
+	<TaxType>
+		<id>T2</id>
+		<value>Tax2</value>
+	</TaxType>
+	
+</TaxTypes>

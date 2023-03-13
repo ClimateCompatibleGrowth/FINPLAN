@@ -1,0 +1,65 @@
+<script>
+    var url = "app/plant/plant.js";
+    $.getScript(url);
+</script>
+
+<div style="padding-top:10px"></div>
+    <div class="card">
+        <div class="cardtitle backwhite">
+            <span lang="en">Plant data</span>   
+        </div>
+        <div class="cardbody">
+            <table class="table table-striped" id="plants">
+                <thead>
+                    <th class="gray" style="width:50px">
+                        <a class="pointer" onclick="newPlant()"><i class='material-icons btngreen' data-lang-content='false' data-toggle='tooltip' lang='en' data-placement='top' title='' data-original-title='Add new plant'>add</i></th>
+                    <th class="gray">Name</th>
+                    <th class="gray">Plant type</th>
+                    <th class="gray">Status</th>
+                    <th class="gray">Ownership</th>
+                    <th class="gray">Unit size</th>
+                    <th class="gray">First operational year</th>
+                    <th class="gray">Construction period</th>
+                    <th class="gray">Plant life in years</th>
+                    <th class="gray">Product type</th>
+                    <th class="gray" style="width:50px"></th>
+                    </thead>
+                    <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="planttabs" style="display:none">
+    <ul class="nav nav-tabs" id="plantnavs">
+        <li role="presentation">
+        <a class="pointer" onclick="getDataPlant(this.id)" id="plant_general">
+            <span lang="en">Plant data</span></a></li>
+        <li role="presentation">
+            <a  class="pointer" onclick="getDataPlant(this.id)" id="plant_production">
+                <span lang="en">Plant production</span></a></li>
+        <li role="presentation">
+            <a  class="pointer" onclick="getDataPlant(this.id)" id="plant_omcosts">
+                <span lang="en">O &amp; M costs</span></a></li>
+        <li role="presentation">
+            <a  class="pointer" onclick="getDataPlant(this.id)" id="plant_fuelcosts">
+                <span lang="en">Fuel cost</span></a></li>
+        <li role="presentation">
+            <a  class="pointer" onclick="getDataPlant(this.id)" id="plant_generalexpenses">
+                <span lang="en">General expenses data</span></a></li>
+        <li role="presentation">
+            <a  class="pointer" onclick="getDataPlant(this.id)" id="plant_investments">
+                <span lang="en">Investments</span></a></li>
+                <li role="presentation">
+                    <a  class="pointer" onclick="getDataPlant(this.id)" id="plant_sources">
+                        <span lang="en">Sources of financing</span></a></li>
+        <li role="presentation">
+            <a  class="pointer" onclick="getDataPlant(this.id)" id="plant_depreciation">
+                <span lang="en">Depreciation</span></a></li>
+                <li role="presentation">
+                    <a  class="pointer" onclick="getDataPlant(this.id)" id="plant_decommissioning">
+                        <span lang="en">Decommissioning</span></a></li>
+        </ul>
+
+            <div style="padding-top:10px"></div>
+        </div>
+
+        <div id="plantcontent"></div>

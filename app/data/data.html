@@ -1,0 +1,73 @@
+<script>
+   var url = "app/data/data.js";
+   $.getScript(url);
+</script>
+<input type="hidden" id="startyeargi">
+<input type="hidden" id="endyear">
+<input type="hidden" id="baseCurrency">
+<div id="tabs" style="padding-bottom:10px"></div>
+<div class="box-shadow card backwhite">
+   <div class="cardtitle backwhite">
+      <span id="gridTitle" lang="en"></span>
+      <div class="btn-group inline pull-right">
+         <a id="btnBack" style="display:none" onclick="getDataPlant('plant_sources')"><i class="material-icons btnblue carddivider" title="Back" data-lang-content='false' lang="en">keyboard_arrow_left</i></a>
+
+         <a id="chartGrid" onclick="showChart('gsFlexGrid')"><i class="material-icons btngreen carddivider" data-toggle="tooltip" title="Chart" data-lang-content='false' lang="en">equalizer</i></a>
+         <a id="decDown" onclick="decDown('gsFlexGrid')">
+         <i class="material-icons btnorange carddivider" data-toggle="tooltip" title="Decrease number of decimal places" data-lang-content='false' lang="en">keyboard_arrow_left</i></a>
+         <a  id="decUp" onclick="decUp('gsFlexGrid')">
+         <i class="material-icons btnorange carddivider" data-toggle="tooltip" title="Increase number of decimal places" data-lang-content='false' lang="en">keyboard_arrow_right</i></a>
+         <a download="Export" id="exportgrid" onclick="exportExcel('gsFlexGrid', $(this) )">
+         <i class="material-icons btnblue carddivider" data-toggle="tooltip" title="Export to excel" data-lang-content='false' lang="en">file_download</i></a>
+         <a onclick="saveData()" id="savedata">
+         <i class="material-icons btngreen carddivider" data-toggle="tooltip" title="Save data" data-lang-content='false' lang="en">save</i></a>
+         <a id="info" onclick="loadInfo()"> 
+            <i class="material-icons btnorange carddivider" data-toggle="tooltip" title="More information" data-lang-content='false' lang="en">help_outline</i></a>
+      </div>
+
+   </div>
+   <div class="cardbody">
+      <form id="formAdditionaData">
+         <div id="additionalData"></div>
+      </form>
+      <div id="notevalueentered" lang="en" class="text-mutted small" style="display:none">A value entered for one year will also be applicable for subsequent years, until a new value is entered for a future year.</div>
+      <div id="gsFlexGrid"></div>
+      <br/><br/>
+      <input type="text" id="dataNotes" class="form-control" lang="en" placeholder="Data notes" class="text-mutted" autocomplete="off" />
+   </div>
+</div>
+
+<!-- Modal for displaying chart -->
+<div class="modal right fade" id="chartModalInput">
+<div class="modal-dialog" style="width:100%; padding-left:260px; padding-top:60px">
+<div class="modal-content">
+   <div class="modal-header"><span lang="en">CHART</span>
+      <button type="button" class="close" data-dismiss="modal">
+      <i class="material-icons">close</i>
+      </button>
+   </div>
+   <div class="modal-body">
+      <div class="card">
+         <div class="cardtitle backwhite">
+            <span id="titlechartcard" lang="en">Chart</span>
+            <div class="btn-group inline pull-right">
+               <a  id="line" class="changeChart">
+               <i class="material-icons btngreen carddivider" data-lang-content='false' lang="en" data-toggle="tooltip" title="Line chart">show_chart</i></a>
+               <a  id="column" class="changeChart">
+               <i class="material-icons btnblue carddivider" data-lang-content='false' lang="en" data-toggle="tooltip" title="Column chart">equalizer</i></a>
+               <a   id="stackedarea" class="changeChart">
+               <i class="material-icons btnorange carddivider" data-lang-content='false' lang="en" data-toggle="tooltip" title="Area chart">insert_photo</i></a>
+               <a   id="stackedcolumn"
+                  class="changeChart">
+               <i class="material-icons btnorange carddivider" data-toggle="tooltip" title="Stacked column chart" data-lang-content='false' lang="en">clear_all</i></a>
+               <a   id="exportChart" onclick="exportChart()">
+               <i class="material-icons btnblue carddivider" data-toggle="tooltip" title="Download image" data-lang-content='false' lang="en">file_download</i></a>
+            </div>
+         </div>
+         <div class="cardbody" id="chartdiv">
+            <div id="chartResults" style="width: 100%; height: 500px">chart</div>
+         </div>
+      </div>
+   </div>
+</div>
+<div id="hiddenfields"></div>

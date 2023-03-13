@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creditsources>
+	<creditsource>
+		<id>FS_L1</id>
+		<value>CommercialLoan</value>
+	</creditsource>
+	<creditsource>
+		<id>FS_L2</id>
+		<value>CommercialLoan2</value>
+	</creditsource>
+</creditsources>

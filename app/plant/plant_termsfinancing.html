@@ -1,0 +1,144 @@
+
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table" id="tbltermsfinancing">
+                <tr>
+                    <td style="background-color: #f2f2f2">
+                        <span lang="en" id="Total_amount_in_constant_prices">Total amount in constant prices (Million)</span> 
+                    </td>
+                    <td  style="background-color: #f2f2f2"><div id="totcp"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span lang="en">Term (years)</span> 
+                    </td>
+                    <td>
+                        <input id="MaturityTime" name="MaturityTime" type="text" class="form-control" autocomplete="off" onkeyup="onlyDecimal(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span lang="en">Repayment option</span> 
+                        </td><td>
+                        <span class='pure-radiobutton'> 
+                            <input type='radio' id='RepaymentOptionUI' name='RepaymentOption' value='UI'/><label for='RepaymentOptionUI'>Uniform (P)</label> 
+                        </span>
+                        <br/>
+                        <span class='pure-radiobutton'> 
+                            <input type='radio' id='RepaymentOptionST' name='RepaymentOption' value='ST'/><label for='RepaymentOptionST'>Uniform (P+I)</label> 
+                        </span>
+                </tr>
+                <tr>
+                    <td>
+                        <span lang="en">Interest Option</span> 
+                    </td><td>
+                        <span class='pure-radiobutton'> 
+                            <input type='radio' id='InterestOptionC' name='InterestOption' value='C' onclick="setReadOnly(this,'InterestRate','InterestSpreadRate')"/><label for='InterestOptionC'>Constant</label> 
+                        </span>
+                        <br/>
+                        <span class='pure-radiobutton'> 
+                            <input type='radio' id='InterestOptionF' name='InterestOption' value='F' onclick="setReadOnly(this,'InterestSpreadRate','InterestRate')"/><label for='InterestOptionF'>Floating</label> 
+                        </span>
+                </tr>
+                <tr>
+                    <td>
+                        <span lang="en">Interest rate (%)</span> 
+                    </td><td>
+                        <input id="InterestRate" name="InterestRate" type="text" class="form-control" autocomplete="off" onkeyup="onlyDecimal(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span lang="en">Spread above the inflation (%)</span> 
+                    </td><td>
+                        <input id="InterestSpreadRate" name="InterestSpreadRate" type="text" class="form-control" autocomplete="off" onkeyup="onlyDecimal(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span lang="en">Fees (exposure fee, commitment fee, etc.)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="pure-checkbox" style="padding-right:25px">                    
+                            <input type="checkbox" class="basic" id="OTInitial" value="YES" name="OTInitial" onclick="setReadOnly(this,'OTIRate')">                    
+                            <label for="OTInitial">One time initial (Millions)</label>
+                        </td><td>
+                            <input id="OTIRate" name="OTIRate" type="text" class="form-control" autocomplete="off" onkeyup="onlyDecimal(this)" readonly />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="pure-checkbox" style="padding-right:25px">                    
+                            <input type="checkbox" class="basic" id="DUpfront" value="YES" name="DUpfront" onclick="setReadOnly(this,'DURate')">                    
+                            <label for="DUpfront">Paid upfront (%)</label>
+                        </td><td>
+                            <input id="DURate" name="DURate" type="text" class="form-control" autocomplete="off" onkeyup="onlyDecimal(this)" readonly />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="pure-checkbox" style="padding-right:25px">                    
+                            <input type="checkbox" class="basic" id="PDrawdown" value="YES" name="PDrawdown" onclick="setReadOnly(this,'PDRate')">                    
+                            <label for="PDrawdown">Paid as drawdown (%)</label>
+                        </td><td>
+                            <input id="PDRate" name="PDRate" type="text" class="form-control" autocomplete="off" onkeyup="onlyDecimal(this)" readonly/>
+                        </div>
+                    </td>
+                </tr>
+                </table>
+                </div>
+                <div class="col-md-6">
+                    <table class="table" id="tblidc">
+                <tr>
+                    <td>
+                        <span lang="en">IDC financing option</span> 
+                    </td><td>
+                        <span class='pure-radiobutton'> 
+                            <input type='radio' id='IDCOptionY' name='IDCOption' value='Y' onclick="setReadOnlyIDC(this)"/><label for='IDCOptionY'>Yes</label> 
+                        </span>
+                        <br/>
+                        <span class='pure-radiobutton'> 
+                            <input type='radio' id='IDCOptionN' name='IDCOption' value='N' onclick="setReadOnlyIDC(this)"/><label for='IDCOptionN'>No</label> 
+                        </span>
+                </tr>
+                <tr>
+                    <td>
+                        <span lang="en">Loan for IDC (% of IDC)</span> 
+                    </td><td class='idc'>
+                        <input id="IDCLoan" name="IDCLoan" type="text" class="form-control" autocomplete="off" onkeyup="onlyDecimal(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span lang="en">Term (years)</span> 
+                    </td><td class='idc'>
+                        <input id="IDCTerm" name="IDCTerm" type="text" class="form-control" autocomplete="off" onkeyup="onlyDecimal(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span lang="en">Interest rate (%)</span> 
+                    </td><td class='idc'>
+                        <input id="IDCRate" name="IDCRate" type="text" class="form-control" autocomplete="off" onkeyup="onlyDecimal(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span lang="en">Repayment option</span> 
+                    </td><td class='idc'>
+                        <span class='pure-radiobutton'> 
+                            <input type='radio' id='IDCRepaymentUI' name='IDCRepayment' value='UI'/><label for='IDCRepaymentUI'>Uniform (P)</label> 
+                        </span>
+                        <br/>
+                        <span class='pure-radiobutton'> 
+                            <input type='radio' id='IDCRepaymentST' name='IDCRepayment' value='ST'/><label for='IDCRepaymentST'>Uniform (P+I)</label> 
+                        </span>
+                </tr>
+            </table>
+        </div>
+    </div>

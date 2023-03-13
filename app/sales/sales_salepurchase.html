@@ -1,0 +1,55 @@
+<script>
+    var url = "app/sales/sales_salepurchase.js";
+    $.getScript(url);
+</script>
+<ul class="nav nav-tabs">
+        <li role="presentation">
+            <a href="#/SalePurchase/sales_sale" id="sales_sale">
+                <span lang="en">Sales data</span>
+            </a>
+        </li>
+        <li role="presentation">
+            <a href="#/SalePurchase/sales_purchase" id="sales_purchase">
+                <span lang="en">Purchase data</span>
+            </a>
+        </li>
+    <li>
+		<a href="#/GetData/sales_consumers" id="sales_consumers">
+			<span lang="en">Consumers contribution and deposits</span>
+		</a>
+	</li>
+	<li role="presentation">
+		<a href="#/GetData/sales_revenues" id="sales_revenues">
+			<span lang="en">Fixed revenues and other income</span>
+		</a>
+	</li>
+</ul>
+<div style="padding-top:10px"></div>
+<input type="hidden" id="producttypeid" value="E">
+<input type="hidden" id="perunitid" value="">
+<input type="hidden" id="currencyName" value="">
+    <div class="card">
+        <div class="cardtitle backwhite">
+            <span lang="en">Sales data</span>   
+        </div>
+        <div class="cardbody">
+            <table class="table table-striped" id="tblsales">
+                <thead>
+                    <tr> 
+                        <td class='gray' style='width:50px'> 
+                        <a class='pointer' onclick='getDataSalePurchase(0)'><i class='material-icons btngreen' data-lang-content='false' data-toggle='tooltip' lang='en' data-placement='top' title='' data-original-title='Add new data'>add</i></th> 
+                        </td> 
+                        <td class='gray'><span lang='en'>Product name and units</span></td> 
+                        <td class='gray'><span lang='en'>Client</span></td> 
+                        <td class='gray'><span lang='en'>Currency</span></td> 
+                        <td class='gray'><span lang='en'>Quantity</span></td> 
+                        <td class='gray'><span lang='en'>Price for first year</span></td> 
+                        <td class='gray' style='width:50px'></td> 
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="salepurchasecontent"></div>

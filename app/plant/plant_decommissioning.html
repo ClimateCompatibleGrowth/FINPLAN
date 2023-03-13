@@ -1,0 +1,36 @@
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="text-mutted small">
+                No interest applied to external trust. Internal fund refers to funds set aside within the company. Total amount refers to amount in constant monetary terms, to which inflation will be applied.
+            </div>
+            <br/>
+            <table class="table" id="decommisioning">
+                <tbody>
+                <tr>
+                    <td>
+                        <span lang="en">Decommissioning cost</span><br/>
+                        <span class='pure-radiobutton'> 
+                            <input type='radio' id='fundt' name='fund' value='T' checked/><label for='fundt'>External trust</label> 
+                        </span> <br/>
+                        <span class='pure-radiobutton'> 
+                            <input type='radio' id='fundf' name='fund' value='F'/><label for='fundf'>Internal fund</label> 
+                        </span> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span lang="en">Start year of payment</span>
+                        <input id="startyear" name="startyear" type="text" class="form-control" size="4" maxlength="4" autocomplete="off" onkeyup="onlyNumber(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span lang="en">Last year of payment</span>
+                        <input id="deccyear" name="deccyear" type="text" class="form-control" size="4" maxlength="4" autocomplete="off" onkeyup="onlyNumber(this)" />
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
